@@ -1,8 +1,3 @@
-
-
-
-
-
 const weatherForm = document.querySelector('form');
 const inputElement = document.querySelector('input');
 const messageData = document.getElementById('info');
@@ -18,7 +13,7 @@ weatherForm.addEventListener('submit',(eve)=>{
         errorParagraph.textContent = 'Please enter address';
         return; 
     }
-    // let isLoading = true;
+
     messageData.textContent = 'Loading weather data ...'
     errorParagraph.textContent = '';
 
@@ -35,7 +30,6 @@ weatherForm.addEventListener('submit',(eve)=>{
         });
     });
 
-    // console.log(data);
     console.log(address);
 
 });

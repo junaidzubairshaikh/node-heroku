@@ -11,10 +11,9 @@ const forecast = ({ latitude, longitude },callback) => {
             return;
         }
 
-        const {  weather_descriptions, temperature } = response.body.current;
+        const {  weather_descriptions, temperature, humidity } = response.body.current;
         
-        console.log(response.body)
-        callback(undefined, `Temperature is ${temperature} and it is ${weather_descriptions[0]}`);
+        callback(undefined, `Temperature is ${temperature} and it is ${weather_descriptions[0]}. Humidity is ${humidity}`);
     });
 }
 

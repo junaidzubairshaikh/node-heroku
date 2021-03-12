@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link
+            rel="stylesheet"
+            href="/css/style.css"
+        >
+        <script src="/js/client.js" defer></script>
+        <title>Home</title>
+
+    </head>
+
+    <body>
+        <div class="main-page">
+         {{>header}}
+            <main>
+                <h1>Weather Forecast </h1>
+
+                <form>
+                    <input type="text" placeholder="enter address">
+                    <button type="submit">Search</button>
+                </form>
+
+                <p id="info"></p>
+
+                <p id="error"></p>
+            </main>
+
+            {{>footer}}
+        </div>
+    </body>
+
+</html>

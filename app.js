@@ -6,6 +6,7 @@ const geocode = require('./util/geocode');
 const forecast = require('./util/forecast');
 
 const app =new express();
+const port = process.env.PORT || 3000;
 
 const publicDirectory =path.join(__dirname,'public');
 const templateDirectory = path.join(__dirname,'templates/views');
@@ -28,15 +29,7 @@ app.get('/help',(req,res)=>{
         name:'A help page'
     });
 });
-// app.get('/',(req,res)=>{
 
-//     res.send('<h1>hello world</h1>');
-// });
-
-
-// app.use('/help',(req,res)=>{
-//     res.send('<title>Weather App</title>');
-// });
 
 app.get('/about', (req, res) => {
     res.render('about',{
@@ -93,6 +86,6 @@ app.get('*',(req,res)=>{
     });
 });
 
-app.listen(3000,()=>{
-    console.log('server is running on port');
+app.listen(port, () => {
+    console.log('server is running on port ', port);
 });
